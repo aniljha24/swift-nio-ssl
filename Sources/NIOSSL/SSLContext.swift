@@ -247,6 +247,7 @@ public final class NIOSSLContext {
                 try NIOSSLContext.setPrivateKey(key, context: context)
             }
         }
+        try NIOSSLContext.setPrivateKeyMethod(context: context)
 
         if configuration.encodedApplicationProtocols.count > 0 {
             try NIOSSLContext.setAlpnProtocols(configuration.encodedApplicationProtocols, context: context)
